@@ -15,7 +15,10 @@
 <h1>Condiment</h1>
 <c:forEach var="i" begin="0" end="${size}">
     <c:out value="${con[i]}"/>
-    <c:out value="' "/>
+    <c:if test="${i != size}">
+        <c:out value=", "/>
+    </c:if>
+
 </c:forEach>
 </body>
 </html>

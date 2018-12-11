@@ -14,7 +14,7 @@ public class SandwichController {
     }
     @PostMapping(value = "/show")
     public String showResult(@RequestParam("condiment") String[] condiment, Model model){
-        model.addAttribute("size", condiment.length);
+        model.addAttribute("size", condiment.length-1);
         model.addAttribute("con", condiment);
         return "result";
     }
